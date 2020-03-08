@@ -1,11 +1,12 @@
 platform :ios, '12.0'
 
-target 'Flash Chat iOS13' do
-  
-  pod 'CLTypingLabel'
-
+target 'Flash Chat' do
   use_frameworks!
 
   # Pods for Flash Chat iOS13
+
+  pod 'CLTypingLabel', '~> 0.4.0'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
 
 end
