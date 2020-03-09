@@ -22,7 +22,7 @@ class RegisterViewController: UIViewController {
                 }
                 
                 if authResult != nil {
-                    self.performSegue(withIdentifier: "RegisterToChat", sender: self)
+                    self.performSegue(withIdentifier: K.registerSegue, sender: self)
                 }
             }
         }
