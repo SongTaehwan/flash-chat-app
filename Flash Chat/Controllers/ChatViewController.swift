@@ -37,6 +37,10 @@ class ChatViewController: UIViewController {
             if let e = error {
                 print("Fetching Fail: \(e)")
             } else if let snapshots = querySnapshot?.documents {
+                if (snapshots.count == 0) {
+                    return
+                }
+
                 for doc in snapshots {
                     let data = doc.data()
                     
@@ -49,7 +53,7 @@ class ChatViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                     let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
-                    self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+                    self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
                 }
             }
         }
