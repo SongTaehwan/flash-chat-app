@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="./Flash-Chat-demo.gif" height="400" />
+    <img src="./Flash-Chat-demo.gif" height="600" />
 </p>
 
 # Flash-Chat
